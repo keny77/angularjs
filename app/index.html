@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-	<head>		
+	<head>	
+		<base href="/app/" />
 		<title>Mon Projet</title>
 	</head>
 	<body>
@@ -11,12 +12,13 @@
 			<p>Header</p>
 		</script>
 		<script type="text/ng-template" id="body.html">
-			<p>Body</p>
+			<ng-view></ng-view>
 		</script>
 		<script type="text/ng-template" id="footer.html">
 			<p>Footer</p>
 		</script>
-		<script src="../../example_angular-master/etc/angular.min.js"></script>
+		<script src="../etc/angular.min.js"></script>
+		<script src="../etc/angular-route.min.js"></script>
 		<script src="app.js"></script>
 	</body>
 </html>
