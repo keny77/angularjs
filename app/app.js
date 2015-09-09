@@ -23,6 +23,16 @@
 			});
 	}]);
 	
+	app.run(['$rootScope', '$http', '$q', function($rootScope, $http, $q) {
+		$q.when('start').then(function() {
+			return $http.get('data.json');
+		}).then(function(response) {
+			$rootScope.paysList = response.data.pays;
+		}).catch(function(error) {
+			console.error('Error !', error);
+		});
+	}]);
+	
 	app.directive('myHeader', function() {
 		console.log('Header');
 		return {
