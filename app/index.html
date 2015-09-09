@@ -13,8 +13,10 @@
 		</script>
 		<script type="text/ng-template" id="body.html">
 			<ng-view></ng-view>
+			<input type="text" ng-model="filtre"/><br/>
+			{{filtre}}
 			<ul>
-				<li ng-repeat="pays in paysList">{{ pays }}</li>
+				<li ng-repeat="pays in paysList | filter:filtre track by $index">{{ pays }}</li>
 			</ul>
 		</script>
 		<script type="text/ng-template" id="footer.html">
