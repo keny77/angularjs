@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<title>JQuery Stars</title>
+	</head>
+	<body ng-init="rate = 3">
+		<input type="text" ng-model="rate" /><br/>
+		{{rate}}
+		<my-stars rate="rate"></my-stars>
+		<script src="../../etc/jquery.min.js"></script>
+		<script src="../../etc/jquery-ui.js"></script>
+		<script src="../../etc/angular.min.js"></script>
+		<script src="jquery_stars.js"></script>
+		<script src="app.js"></script>
+
+		<script>
+$(document).ready(function(){
+	$("#my_stars").stars({ rate: 2});
+});
+		</script>
+	</body>
+</html>
